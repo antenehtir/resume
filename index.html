@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anteneh Tirusew Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Viewer</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-    iframe {
-      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
       border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 600px) {
+      .container {
+        height: 100vh;
+        padding: 5px;
+      }
+      iframe {
+        height: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/antenehtir/resume/a62c7c0dfb28af5786402a11727cacb49aeba6b8/resume.pdf&embedded=true">
-  </iframe>
+  <div class="container">
+    <!-- Replace URL below with your actual GitHub PDF raw link -->
+    <iframe src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/your-resume.pdf"></iframe>
+  </div>
 </body>
 </html>
