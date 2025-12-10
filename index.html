@@ -9,34 +9,18 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
-      background: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
-
-    iframe {
       width: 100%;
-      height: 100%;
-      border: none;
     }
-
-    .fallback {
-      display: none;
-      text-align: center;
-      padding: 40px;
-      font-size: 18px;
-      color: #555;
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
     }
   </style>
 </head>
 <body>
-
-  <iframe src="/resume.pdf" onerror="document.querySelector('.fallback').style.display='block';"></iframe>
-
-  <div class="fallback">
-    <p>Unable to display the resume. <br>
-       <a href="/resume.pdf">Click here to download it.</a></p>
-  </div>
-
+  <iframe 
+    src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/antenehtir/resume/a62c7c0dfb28af5786402a11727cacb49aeba6b8/resume.pdf&embedded=true">
+  </iframe>
 </body>
 </html>
